@@ -1,0 +1,116 @@
+/*Style for header*/
+header{
+    background-color: rgb(251, 239, 163);
+    text-align: left;
+    padding: 15px;
+}
+
+/* Style for navigation menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*Style for main*/
+.main{
+	width:100%;
+	display:flex;
+}
+
+div h1 {
+    background-color: rgb(94, 175, 152);
+    color: rgb(255, 255, 255);
+}
+
+.slider-frame {
+	max-width: 600px;
+	margin: auto;
+	overflow: hidden;
+}
+
+.slide-images {
+	display: flex;
+	transition: transform 0.5s ease-in-out;
+}
+
+.slide-images div {
+	flex: 0 0 100%;
+}
+
+.img-container {
+	width: 100%;
+	overflow: hidden;
+}
+
+.img-container img {
+	width: 100%;
+	height: auto;
+}
+
+/* Style for footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(251, 239, 163);
+    color: #000000;
+    padding: 5px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Styles for smaller screens */
+
+    /* Adjust header styles for smaller screens */
+    header {
+        padding: 10px;
+    }
+
+    /* Adjust navigation styles for smaller screens */
+    nav a {
+        padding: 10px;
+    }
+
+    /* Adjust main content styles for smaller screens */
+    .main {
+        flex-direction: column;
+    }
+
+    .main div {
+        width: 100%;
+    }
+
+    .main h1 {
+        padding: 20px;
+        font-size: 1.5em;
+    }
+
+    .slider-frame {
+        max-width: 100%;
+    }
+
+    .img-container img {
+        width: 100%;
+        height: auto;
+    }
+}

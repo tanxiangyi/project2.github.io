@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KTS PHARMACY</title>
+    <link rel="stylesheet" type="text/CSS" href="index.css">
+</head>
+
+<body style="background-color:  #427c61;">
+
+<!--Header-->
+<header>
+    <div class="logo">
+        <img src=LOGO.png width="300px">
+     </div>
+</header>
+
+<!--Navigation-->
+<nav>
+    <ul>
+        <li><a href="index.html" target="_blank">HOME</a></li>
+        <li><a href="about us.html">ABOUT US</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="service.html">SERVICE</a></li>
+        <li><a href="contact us.html">CONTACT US</a></li>
+    </ul>
+</nav>
+
+<!--Main-->
+<main>
+<div>
+    <h1>Welcome to KTS Pharmacy Website</h1>
+    <br>
+    <h2 style="color: white;" align="center">We Are Here To Help Anytime</h2>
+    <p style="color: white;" align="center">We are open 24/7. If you need any help just contact us at 04-5057678</p>
+    <p style="color: white;" align="center">Feel free to checkout our website. Thank you.</p>
+</div>
+
+<div class="slider-frame">
+    <div class="slide-images">
+        <div class="img-container">
+            <img src="home pic 1.jpg" alt="Slide 1">
+        </div>
+        <div class="img-container">
+            <img src="home pic 2.jpg" alt="Slide 2">
+        </div>
+    </div>
+</div>
+
+<script>
+    const sliderFrame = document.querySelector('.slider-frame');
+    const slideImages = document.querySelector('.slide-images');
+    const imgContainers = document.querySelectorAll('.img-container');
+
+    let currentIndex = 0;
+    const totalSlides = imgContainers.length;
+
+    function showSlide(index) {
+        if (index < 0) {
+            currentIndex = totalSlides - 1;
+        } else if (index >= totalSlides) {
+            currentIndex = 0;
+        } else {
+            currentIndex = index;
+        }
+
+        const translateValue = -currentIndex * 100 + '%';
+        slideImages.style.transform = `translateX(${translateValue})`;
+    }
+
+    function nextSlide() {
+        showSlide(currentIndex + 1);
+    }
+
+    function prevSlide() {
+        showSlide(currentIndex - 1);
+    }
+
+    // Automatic slideshow, change slide every 3 seconds
+    setInterval(nextSlide, 3000);
+</script>
+</main>
+
+<!--Javascript-->
+<script type="text/javascript">
+    let name;
+    do {
+        name = prompt("Welcome to KTS Pharmacy website! Please enter your name to continue");
+        if (/[^a-zA-Z]/.test(name.trim())) {
+            alert("Invalid Name");
+        } else {
+            alert("Welcome, " + name + "! You may browse through our website");
+        }
+    } while (!name || /[^a-zA-Z]/.test(name.trim())); 
+    
+</script>
+
+
+<!--Footer-->
+<div>
+    <footer>
+        <p>@KTS Pharmacy</p>
+    </footer>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KTS PHARMACY</title>
+    <link rel="stylesheet" type="text/CSS" href="contact us.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+</head>
+
+<body style="background-color:  #644a82;">
+
+<!--Header-->
+<header>
+    <div class="logo">
+        <img src=LOGO.png width="300px">
+     </div>
+</header>
+
+<!--Navigation-->
+<nav>
+    <ul>
+        <li><a href="index.html" target="_blank">HOME</a></li>
+        <li><a href="about us.html">ABOUT US</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="service.html">SERVICE</a></li>
+        <li><a href="contact us.html">CONTACT US</a></li>
+    </ul>
+</nav>
+
+<!--Main-->
+<main>
+    <div class="container mt-5">
+    <h2 style="color: white;" align="center">CONTACT US</h2>
+
+    <form action="process.php" method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" name="fullname" id="fullname" placeholder="KRISHMITA SREE A/P NAGENDHRA RAO">
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" name="emailid" id="emailid" placeholder="alice2727@gmail.com">
+    </div>
+
+    <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="text" name="phonenum" id="phonenum" placeholder="014-2332789">
+    </div>
+
+    <div class="form-group">
+        <label for="birthdate">Birthdate</label>
+        <input type="date" name="birthdate" id="birthdate">
+    </div>
+
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" name="houseaddress" id="houseaddress" placeholder="NO 65, LORONG 8, TAMAN PUTRA PRIMA, 47130 PUCHONG">
+    </div>
+
+    <div class="form-group">
+        <label for="state">State</label>
+        <select name="status" id="status">
+            <option value="">-- Choose --</option>
+            <option value="Selangor">Selangor</option>
+            <option value="Pulau Pinang">Pulau Pinang</option>
+            <option value="Pahang">Pahang</option>
+            <option value="Perak">Perak</option>
+            <option value="Johor">Johor</option>
+            <option value="Kedah">Kedah</option>
+            <option value="Negeri Sembilan">Negeri Sembilan</option>
+            <option value="Perlis">Perlis</option>
+            <option value="Terengganu">Terengganu</option>
+            <option value="Kuala Lumpur">Kuala Lumpur</option>
+            <option value="Melaka">Melaka</option>
+            <option value="Kelantan">Kelantan</option>
+            <option value="Sabah">Sabah</option>
+            <option value="Sarawak">Sarawak</option>
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label for="Gender">Gender</label>
+        <input type="radio" name="gender" id="gender" value="Male">Male</input>
+        <input type="radio" name="gender" id="gender" value="Female">Female</input>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message</label>
+        <input type="text" name="yourmessage" id="yourmessage" placeholder="Type your message here.">
+    </div>
+
+    <p>
+        <button type="submit" onclick="submitButton()">Submit</button> &nbsp;
+        <button type="reset" onclick="resetButton()">Reset</button>
+    </p>
+</form>
+</div>
+</main>
+
+<!--Javascript-->
+<script type="text/javascript">
+    function validateForm() {
+        const fullname = document.getElementById('fullname').value;
+        const email = document.getElementById('emailid').value;
+        const phone = document.getElementById('phonenum').value;
+        const address = document.getElementById('houseaddress').value;
+        const state = document.getElementById('status').value;
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const message = document.getElementById('yourmessage').value;
+
+        if (fullname === '' || email === '' || phone === '' || address === '' || state === '' || !gender || message === '') {
+            alert('Please fill in all required fields.');
+            return false;
+        }
+        return true;
+    }
+
+    let age = prompt("Please enter your age");
+    if (age && parseInt(age) <16) {
+        alert("Sorry you are not allowed to fill the form")
+        document.querySelector('form').style.display = 'none';
+    } else {
+        alert("You may proceed to fill the form")
+    }
+
+    function submitButton() {
+        if (validateForm()) {
+            var txt;
+            if (confirm("Are you sure you want to submit the form?") == true) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("Submit").innerHTML=txt;
+        }
+    }
+
+    function resetButton() {
+            var txt;
+            if (confirm("Are you sure you want to reset the details you entered?") == true) {
+                txt = "You pressed OK!";
+            } else {
+                txt = "You pressed Cancel!";
+            }
+            document.getElementById("Reset").innerHTML=txt;
+    }
+</script>
+
+<!--Footer-->
+<div>
+    <footer>
+        <p>@KTS Pharmacy</p>
+    </footer>
+</div>
+
+</body>
+</html>

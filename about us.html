@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>KTS PHARMACY</title>
+    <link rel="stylesheet" type="text/CSS" href="about us.css">
+</head>
+
+<body style="background-color: #427c61;">
+
+<!--Header-->
+<header>
+    <div class="logo">
+        <img src=LOGO.png width="300px">
+     </div>
+</header>
+
+<!--Navigation-->
+<nav>
+    <ul>
+        <li><a href="index.html" target="_blank">HOME</a></li>
+        <li><a href="about us.html">ABOUT US</a></li>
+        <li><a href="product.html">PRODUCT</a></li>
+        <li><a href="service.html">SERVICE</a></li>
+        <li><a href="contact us.html">CONTACT US</a></li>
+    </ul>
+</nav>
+<br>
+
+<!--Main-->
+<main>
+<h1 style="padding-left: 20px;" style="color: white;">ABOUT US</a></h1>
+    
+<div id="container">
+     <div id="content">
+        <p>KTS Pharmacy is a group of pharmacies located mainly in Penang, Kedah and Perlis.
+            Our Philosophy is to provide our customers with the highest standards of healthcare, which includes excellent pharmacist counselling / advice, and new, unique quality products.
+            ALL our pharmacists are Young, Energetic, Friendly and will not hesitate to provide additional tips and tricks to improve your health. Most of our branches have more than 1 pharmacist employed, so you can be sure to have sound advice when you drop by. Oh, and we're mostly open on Sundays  (except for selected public holidays).</p>
+    </div>
+        
+    <div id="image">
+        <img src="https://cdn.eduadvisor.my/articles/2022/05/pharmacy-myths-never-interact-with-patients.png" alt="Image">
+    </div>
+</div>
+<br>
+    
+<div id="kiri">
+    <h3>VISION</h3>
+    <p>We aim to become the health care providers of choice among all stakeholders in the region. We will keep striving for excellence in customer service through innovation in marketing, enabling a wide and easily accessible network of community and prime location pharmacies, supply of exclusive and unique high quality products, superior consultation services, personalized care and above all – customer care focus.</p>
+</div>
+
+<div id="kanan">
+    <h3>MISSION</h3>
+    <p>In order to fulfill our vision, we strive to prioritize a quality and timely service in both retail and wholesale markets –while continuously exploring new opportunities in order to propel further growth. This is in line with our commitment to provide more communities access to pharmacy products and superior service in response to the regional customer’s health, beauty and well-being needs.</p>
+</div>
+
+<div class="clear"></div>
+</main>
+
+<!--Javascript-->
+<script type="text/javascript">
+    let response;
+    do {
+        response = prompt("Do you wish to read about our pharmacy? Type 'yes' or 'no'.");
+        response = response ? response.toLowerCase() : '';
+    } while (response !== 'yes' && response !== 'no');
+
+    if (response === 'yes') {
+    } else {
+        window.location.href = 'index.html';
+    }
+</script>
+
+<!--Footer-->
+<div>
+    <footer>
+        <p>@KTS Pharmacy</p>
+    </footer>
+</div>
+
+</body>
+</html>

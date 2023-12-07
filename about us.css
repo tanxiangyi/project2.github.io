@@ -1,0 +1,131 @@
+/*Style for header*/
+header{
+    background-color: rgb(251, 239, 163);
+    text-align: left;
+    padding: 15px;
+}
+
+/* Style for navigation menu */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/*Style for main About Us*/
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#content {
+    flex: 0.95;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 20px;
+}
+
+#image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 100px;
+}
+
+#image img {
+    max-width: 55%;
+    height: auto;
+}
+
+div#kiri{
+    width: 45%;
+    float: left;
+    padding: 5px;
+    margin-left: 20px;
+    border-style: dashed;
+    background-color: rgb(179, 231, 192);
+}
+
+div#kanan{
+    width: 45%;
+    float: right;
+    padding: 5px;
+    margin-right: 20px;
+    border-style: dashed;
+    background-color: rgb(179, 231, 192);
+}
+.clear{clear: both;}
+
+/* Style for footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(251, 239, 163);
+    color: #000000;
+    padding: 5px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    /* Styles for smaller screens */
+
+    /* Adjust header styles for smaller screens */
+    header {
+        padding: 10px;
+    }
+
+    /* Adjust navigation styles for smaller screens */
+    nav a {
+        padding: 10px;
+    }
+
+    /* Adjust main content styles for smaller screens */
+    #container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #content {
+        margin: 0;
+        padding: 20px;
+    }
+
+    #image {
+        margin: 20px 0;
+    }
+
+    #image img {
+        max-width: 100%;
+    }
+
+    div#kiri,
+    div#kanan {
+        width: 100%;
+        float: none;
+        margin: 0;
+    }
+}
